@@ -1,0 +1,229 @@
+:root {
+    --color-primary: #E0306F;
+    --color-dark: #141217;
+    --color-light: #F7F4F6;
+    --color-accent: #FFC93C;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: var(--color-dark);
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav__link--active {
+    color: var(--color-primary);
+}
+
+/* Кнопки (мин. размер 44x44) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: 2px solid var(--color-primary);
+}
+
+.btn--accent {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+.btn--large {
+    font-size: 18px;
+    padding: 16px 32px;
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+
+.section__title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Первый экран */
+.hero {
+    background-color: var(--color-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Карточки */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Видео */
+.video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #000;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+/* Подвал */
+.footer {
+    background: var(--color-dark);
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__socials a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero__title {
+        font-size: 40px;
+    }
+
+    .section__title {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer__socials a {
+        margin: 0 10px;
+    }
+}
+/* Дополнительные утилиты для остальных страниц */
+.mt-20 { margin-top: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.form-input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 16px; }
+.filters select { padding: 10px; font-size: 16px; border-radius: 4px; border: 1px solid #ccc; }
