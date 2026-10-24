@@ -9,13 +9,12 @@
     <meta property="og:description" content="Запись на пробное занятие.">
     <meta property="og:image" content="img/og-image.jpg">
     
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F878G67RNG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-F878G67RNG', { 'debug_mode': true });
+      gtag('config', 'G-F878G67RNG');
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -68,22 +67,12 @@
             <div class="container">
                 <h2 class="section__title">Видео с отчётного концерта</h2>
                 <div class="video-wrapper">
-                    <video controls data-event="video_play" data-page-section="concert_video">
-                        <source src="video/concert.mp4" type="video/mp4">
-                    </video>
+                    <video controls data-event="video_play" data-page-section="concert_video"><source src="video/concert.mp4" type="video/mp4"></video>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__info"><p>ООО «Ритм Холл»</p><p>614 125, г. Новосибирск, ул. Театральная, д. 19, 3 этаж</p><p>+7 (900) 919-19-91</p></div>
-            <div class="footer__socials">
-                <a href="#" data-event="social_click" data-page-section="footer" data-social="vk">ВКонтакте</a>
-                <a href="#" data-event="social_click" data-page-section="footer" data-social="telegram">Telegram</a>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer"><div class="container footer__container"><div class="footer__info"><p>ООО «Ритм Холл»</p><p>614 125, г. Новосибирск, ул. Театральная, д. 19, 3 этаж</p><p>+7 (900) 919-19-91</p></div><div class="footer__socials"><a href="#" data-event="social_click" data-page-section="footer" data-social="vk">ВКонтакте</a><a href="#" data-event="social_click" data-page-section="footer" data-social="telegram">Telegram</a></div></div></footer>
     <script src="js/analytics.js"></script>
 </body>
 </html>

@@ -1,64 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Связка за 5 шагов | Ритм Холл</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F878G67RNG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F878G67RNG', { 'debug_mode': true });
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Связка | Ритм Холл</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F878G67RNG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F878G67RNG');</script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <a href="index.html" class="logo">РИТМ ХОЛЛ</a>
-            <nav class="nav"><ul class="nav__list">
-                <li><a href="index.html" class="nav__link">Главная</a></li>
-                <li><a href="styles.html" class="nav__link">Направления</a></li>
-                <li><a href="schedule.html" class="nav__link">Расписание</a></li>
-                <li><a href="teachers.html" class="nav__link">Педагоги</a></li>
-                <li><a href="prices.html" class="nav__link">Цены</a></li>
-                <li><a href="contacts.html" class="nav__link">Контакты</a></li>
-            </ul></nav>
-            <a href="contacts.html" class="btn btn--primary" data-event="contact_click" data-contact-type="header">Записаться</a>
-        </div>
-    </header>
-    <main class="section">
-        <div class="container text-center">
-            <h1 class="section__title">Связка за 5 шагов</h1>
-            <div class="video-wrapper mt-20">
-                <video controls data-event="video_play" data-page-section="choreo">
-                    <source src="video/choreo.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="mt-20">
-                <p>Промокод: <strong id="promo-code">TRIAL0</strong></p>
-                <button id="copy-btn" class="btn btn--accent mt-20" data-event="proto_copy" data-promo="TRIAL0">Скопировать промокод</button>
-            </div>
-            <a href="contacts.html" class="btn btn--primary btn--large mt-20" data-event="cta_click" data-button-name="trial_from_choreo" data-page-section="choreo">Пробное занятие</a>
-        </div>
-    </main>
+    <header class="header"><div class="container header__container"><a href="index.html" class="logo">РИТМ ХОЛЛ</a><nav class="nav"><ul class="nav__list"><li><a href="index.html" class="nav__link">Главная</a></li><li><a href="styles.html" class="nav__link">Направления</a></li><li><a href="schedule.html" class="nav__link">Расписание</a></li><li><a href="teachers.html" class="nav__link">Педагоги</a></li><li><a href="prices.html" class="nav__link">Цены</a></li><li><a href="contacts.html" class="nav__link">Контакты</a></li></ul></nav><a href="contacts.html" class="btn btn--primary" data-event="contact_click" data-contact-type="header">Записаться</a></div></header>
+    <main class="section"><div class="container text-center"><h1 class="section__title">Связка за 5 шагов</h1>
+        <div class="video-wrapper mt-20"><video controls data-event="video_play" data-page-section="choreo"><source src="video/choreo.mp4" type="video/mp4"></video></div>
+        <div class="mt-20"><p>Промокод: <strong id="promo-code">TRIAL0</strong></p><button id="copy-btn" class="btn btn--accent mt-20" data-event="proto_copy" data-promo="TRIAL0">Скопировать</button></div>
+        <a href="contacts.html" class="btn btn--primary btn--large mt-20" data-event="cta_click" data-button-name="trial_from_choreo" data-page-section="choreo">Пробное занятие</a>
+    </div></main>
     <footer class="footer"><div class="container footer__container"><div class="footer__info"><p>ООО «Ритм Холл»</p><p>+7 (900) 919-19-91</p></div><div class="footer__socials"><a href="#" data-event="social_click" data-page-section="footer" data-social="vk">ВКонтакте</a><a href="#" data-event="social_click" data-page-section="footer" data-social="telegram">Telegram</a></div></div></footer>
-    
     <script src="js/analytics.js"></script>
-    
-    <!-- Скрипт копирования промокода -->
-    <script>
-        document.getElementById('copy-btn').addEventListener('click', function() {
-            const promo = document.getElementById('promo-code').textContent;
-            navigator.clipboard.writeText(promo).then(() => {
-                this.textContent = "Скопировано!";
-                setTimeout(() => { this.textContent = "Скопировать промокод"; }, 2000);
-            });
-        });
-    </script>
+    <script>document.getElementById('copy-btn').addEventListener('click',function(){const promo=document.getElementById('promo-code').textContent;navigator.clipboard.writeText(promo).then(()=>{this.textContent="Скопировано!";setTimeout(()=>{this.textContent="Скопировать"},2000);});});</script>
 </body>
 </html>

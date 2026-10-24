@@ -1,7 +1,7 @@
 # Проект ТЗ-19: Школа танцев «Ритм Холл»
 
 ## Ссылки
-* Сайт на Vercel: [вставь ссылку, когда опубликуешь]
+* Сайт на Vercel: [https://tz-19-shkola-tancev-ritm-holl.vercel.app/]
 * Google Таблица с заявками: [https://docs.google.com/spreadsheets/d/1l_YrBfRynefdUmUsPdBC0fG5iHLxAtjBe1K81BsXBXY/edit?usp=sharing]
 * Дашборд DataLens: [ссылка, если сделаешь]
 
