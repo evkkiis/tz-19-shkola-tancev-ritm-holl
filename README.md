@@ -2,7 +2,7 @@
 
 ## Ссылки
 * Сайт на Vercel: [вставь ссылку, когда опубликуешь]
-* Google Таблица с заявками: [вставь ссылку на свою таблицу RitmHall — Leads]
+* Google Таблица с заявками: [https://docs.google.com/spreadsheets/d/1l_YrBfRynefdUmUsPdBC0fG5iHLxAtjBe1K81BsXBXY/edit?usp=sharing]
 * Дашборд DataLens: [ссылка, если сделаешь]
 
 ## Аналитика
