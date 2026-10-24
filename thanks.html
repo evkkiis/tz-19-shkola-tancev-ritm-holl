@@ -43,6 +43,17 @@
         </div>
     </main>
     <footer class="footer"><div class="container footer__container"><div class="footer__info"><p>ООО «Ритм Холл»</p><p>+7 (900) 919-19-91</p></div></div></footer>
+    
     <script src="js/analytics.js"></script>
+    
+    <!-- Скрипт для отображения номера заявки -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reqId = sessionStorage.getItem('last_request_id');
+            if (reqId) {
+                document.getElementById('request-number').textContent = reqId;
+            }
+        });
+    </script>
 </body>
 </html>

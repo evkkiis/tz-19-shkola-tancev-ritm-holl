@@ -40,13 +40,25 @@
                 </video>
             </div>
             <div class="mt-20">
-                <p>Промокод: <strong>TRIAL0</strong></p>
-                <button class="btn btn--accent mt-20" data-event="proto_copy" data-promo="TRIAL0">Скопировать промокод</button>
+                <p>Промокод: <strong id="promo-code">TRIAL0</strong></p>
+                <button id="copy-btn" class="btn btn--accent mt-20" data-event="proto_copy" data-promo="TRIAL0">Скопировать промокод</button>
             </div>
             <a href="contacts.html" class="btn btn--primary btn--large mt-20" data-event="cta_click" data-button-name="trial_from_choreo" data-page-section="choreo">Пробное занятие</a>
         </div>
     </main>
     <footer class="footer"><div class="container footer__container"><div class="footer__info"><p>ООО «Ритм Холл»</p><p>+7 (900) 919-19-91</p></div><div class="footer__socials"><a href="#" data-event="social_click" data-page-section="footer" data-social="vk">ВКонтакте</a><a href="#" data-event="social_click" data-page-section="footer" data-social="telegram">Telegram</a></div></div></footer>
+    
     <script src="js/analytics.js"></script>
+    
+    <!-- Скрипт копирования промокода -->
+    <script>
+        document.getElementById('copy-btn').addEventListener('click', function() {
+            const promo = document.getElementById('promo-code').textContent;
+            navigator.clipboard.writeText(promo).then(() => {
+                this.textContent = "Скопировано!";
+                setTimeout(() => { this.textContent = "Скопировать промокод"; }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>
