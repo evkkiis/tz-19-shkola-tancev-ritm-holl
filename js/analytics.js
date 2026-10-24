@@ -1,3 +1,20 @@
+// js/analytics.js
+// Этот файл отвечает за отправку событий в Google Analytics 4 (GA4) и сбор UTM-меток.
+
+// 1. Сбор UTM-меток (выполняется сразу при загрузке скрипта на любой странице)
+(function collectUTM() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+    
+    utmKeys.forEach(key => {
+        const value = urlParams.get(key);
+        if (value) {
+            sessionStorage.setItem(key, value);
+            console.log("Сохранена метка:", key, "=", value);
+        }
+    });
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Функция отправки события
@@ -9,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 1. Поиск элементов с атрибутом data-event
+    // 2. Поиск элементов с атрибутом data-event (клики)
     const trackableElements = document.querySelectorAll('[data-event]');
     
     trackableElements.forEach(element => {
@@ -29,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Отслеживание video_play (один раз за просмотр)
+    // 3. Отслеживание video_play (один раз за просмотр)
     const videos = document.querySelectorAll('video[data-event]');
     videos.forEach(video => {
         video.addEventListener('play', () => {
@@ -43,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Отслеживание scroll (90%)
+    // 4. Отслеживание scroll (90%)
     let scrollTracked = false;
     window.addEventListener('scroll', () => {
         if (scrollTracked) return;
@@ -57,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. page_view
+    // 5. page_view
     sendEvent('page_view', {
         page_location: window.location.href,
         page_title: document.title
